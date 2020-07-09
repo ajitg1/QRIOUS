@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="/public/img/fav.png">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/public/stylesheets/app.css">
+  <link rel="stylesheet" type="text/css" href="/public/stylesheets/game.css">
+  <title>QRIOUS</title>
+
+</head>
+
+<body>
+  <span class="material-icons" id="sunny" onclick="toggleTheme()">
+    wb_sunny
+  </span>
+  <div class="container">
+    <div id="loading">
+      <span id="loadingText">Loading...</span>
+    </div>
+
+    <div id="game" class="flex-center flex-column hidden">
+      <div id="hud">
+
+        <div id="hud-item" class="column">
+          <p class="hud-prefix question">
+            Question:<span id="questionNumber"></span>
+          </p>
+          <div id="progress-bar">
+            <div id="progress-complete">
+            </div>
+          </div>
+
+        </div>
+        <div class="base-timer column">
+          <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="base-timer__circle">
+              <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+              <path id="base-timer-path-remaining" stroke-dasharray="283" class="base-timer__path-remaining" d="
+                        M 50, 50
+                        m -45, 0
+                        a 45,45 0 1,0 90,0
+                        a 45,45 0 1,0 -90,0
+                      "></path>
+            </g>
+          </svg>
+          <span id="base-timer-label" class="base-timer__label">
+          </span>
+        </div>
+        <div id="hud-item score" class="column">
+          <p class="hud-prefix score">
+            Score
+          </p>
+          <h1 class="hud-text" id="score">
+            0
+          </h1>
+        </div>
+      </div>
+      <h2 id="question"></h2>
+      <div class="choice-container">
+        <p class="choice-prefix">A</p>
+        <p class="choice-text" data-number="1"></p>
+      </div>
+      <div class="choice-container">
+        <p class="choice-prefix">B</p>
+        <p class="choice-text" data-number="2"></p>
+      </div>
+      <div class="choice-container">
+        <p class="choice-prefix">C</p>
+        <p class="choice-text" data-number="3"></p>
+      </div>
+      <div class="choice-container">
+        <p class="choice-prefix">D</p>
+        <p class="choice-text" data-number="4"></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.3/howler.js"></script>
+  <script src="/scripts/game.js"></script>
+</body>
+
+</html>

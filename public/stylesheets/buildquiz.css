@@ -1,0 +1,68 @@
+h2 {
+  margin-top: 8rem;
+  text-align: center;
+  font-size: 5rem;
+  color: #565aeb;
+}
+
+form {
+  height: 100vh;
+  font-size: 3rem;
+  -webkit-appearance: none;
+}
+
+#instruction {
+  font-size: 2rem;
+}
+
+.amount {
+  font-size: 2rem;
+}
+
+select {
+  font-size: 2rem;
+  width: 20rem;
+}
+
+.form-control {
+  height: 3rem;
+  width: 50rem;
+  font-size: 1.8rem;
+  border: 0.1rem solid #56a5eb;
+  padding: 0px 0px 0px 8px;
+  box-shadow: 0 0.1rem 1rem 0 rgba(86, 185, 235, 0.5);
+}
+
+option {
+  font-size: 1.5rem;
+  padding: 10px 10px 10px 10px;
+}
+
+#trivia-amount.form-control {
+  border-radius: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.dark-mode > div > form > label {
+  color: whitesmoke;
+}
+
+@media (max-width: 767px) {
+  h2 {
+    margin-top: 6rem;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-control {
+    width: 80%;
+  }
+
+  label {
+    font-size: 2.3rem;
+  }
+
+}

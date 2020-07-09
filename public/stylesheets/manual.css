@@ -1,0 +1,100 @@
+:root {
+  background: #83a4d4;
+  background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);
+  background: linear-gradient(to right, #b6fbff, #83a4d4);
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Baloo Paaji 2", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 20rem 30rem 5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+h2 {
+  font-size: 6rem;
+  color: #565aeb;
+  text-align: center;
+  margin-top: 7rem;
+}
+
+#quizButton {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list {
+  font-size: 2.5rem;
+  list-style-position: inside;
+}
+
+.buton {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  width: 20rem;
+  text-align: center;
+  border: 0.1rem solid #56a5eb;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  border-radius: 20px;
+  color: #565aeb;
+  background-color: white;
+  box-shadow: 0 0.1rem 1rem 0 rgba(86, 185, 235, 0.5);
+}
+
+.buton:hover {
+  cursor: pointer;
+  background-color: #565aeb;
+  color: white;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform linear 0.2s;
+}
+
+.buton[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.buton:focus {
+  outline: 0;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+@media (max-width: 767px) {
+  .container {
+    grid-template-rows: 10rem 30rem 5rem;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+  }
+
+  .list {
+    font-size: 1.7rem;
+  }
+
+  .buton {
+    font-size: 1.5rem;
+    width: 15rem;
+  }
+}

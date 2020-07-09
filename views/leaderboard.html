@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylsheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/app.css">
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/leaderboard.css">
+    <link rel="shortcut icon" type="image/png" href="/public/img/fav.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap" rel="stylesheet">
+    <title>LeaderBoard</title>
+</head>
+
+<body>
+    <span class="material-icons" id="sunny" onclick="toggleTheme()">
+        wb_sunny
+    </span>
+    <div class="container">
+        <div id="home" class="flex-center flex-column">
+            <h1 id="highScore">Leaderboard</h1>
+            <div id="highScoreList"></div>
+            <a class="buton" href="/views/index.html">Home</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="/scripts/leaderboard.js"></script>
+</body>
+
+</html>

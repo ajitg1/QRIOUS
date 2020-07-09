@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/public/img/fav.png">
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/app.css">
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/manual.css">
+    <title>Manual</title>
+</head>
+
+<body>
+    <span class="material-icons" id="sunny" onclick="toggleTheme()">
+        wb_sunny
+    </span>
+    <div class="container">
+        <h2>Manual</h2>
+        <ul class="list">
+            <li>For each question you will get a maximum of 25 seconds.</li>
+            <li>Each question carries a maximum of 20 points and it decreases as the time increases.</li>
+            <li>Your final score will be the average score which shows your accuracy.</li>
+        </ul>
+        <div id="quizButton">
+            <a class="buton left" href="/views/index.html">Home</a>
+            <a class="buton right" href="/views/buildquiz.html">Play Now</a>
+        </div>
+    </div>
+    <script>
+        var icon = document.getElementById("sunny");
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'light-mode') {
+                icon.innerHTML = "brightness_2";
+                localStorage.setItem('theme', 'dark-mode');
+                document.body.classList.add('dark-mode');
+            }
+            else {
+                icon.innerHTML = "wb_sunny";
+                localStorage.setItem('theme', 'light-mode');
+                document.body.classList.remove('dark-mode');
+            }
+        }
+        (function () {
+            if (localStorage.getItem('theme') === 'dark-mode') {
+                icon.innerHTML = "brightness_2";
+                document.body.classList.add('dark-mode');
+            }
+            else {
+                document.body.classList.remove('dark-mode');
+            }
+        })();
+    </script>
+</body>
+
+</html>

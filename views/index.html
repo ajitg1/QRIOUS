@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylsheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/app.css">
+    <link rel="shortcut icon" type="image/png" href="/public/img/fav.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap" rel="stylesheet">
+    <title>QRIOUS</title>
+</head>
+
+<body>
+    <span class="material-icons" id="sunny" onclick="toggleTheme()">
+        wb_sunny
+    </span>
+    <div class="container">
+        <div id="home" class="flex-center flex-column">
+            <h1>QRIOUS</h1>
+            <a class="buton" href="/views/buildquiz.html">Play Now</a>
+            <a class="buton" href="/views/manual.html">Manual</a>
+            <a class="buton" href="/views/leaderboard.html">Leaderboard</a>
+
+        </div>
+    </div>
+    <script>
+        var icon = document.getElementById("sunny");
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'light-mode') {
+                icon.innerHTML = "brightness_2";
+                localStorage.setItem('theme', 'dark-mode');
+                document.body.classList.add('dark-mode');
+            }
+            else {
+                icon.innerHTML = "wb_sunny";
+                localStorage.setItem('theme', 'light-mode');
+                document.body.classList.remove('dark-mode');
+            }
+        }
+        (function () {
+            if (localStorage.getItem('theme') === null) {
+                localStorage.setItem('theme', 'light-mode');
+            }
+            else {
+                if (localStorage.getItem('theme') === 'dark-mode') {
+                    icon.innerHTML = "brightness_2";
+                    document.body.classList.add('dark-mode');
+                }
+                else {
+                    document.body.classList.remove('dark-mode');
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>
