@@ -47,5 +47,5 @@ function saveHighScore(event) {
     });
     highScore.splice(LEADERBOARD_SIZE);
     localStorage.setItem("highScore", JSON.stringify(highScore));
-    window.location.assign("/views/leaderboard.html");
+    window.location.assign("../views/leaderboard.html");
 }
