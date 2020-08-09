@@ -22,7 +22,7 @@ var timeLeft = TIME_LIMIT;
 var timerInterval;
 
 var sound = new Howl({
-    src: ['/public/sound/tick.mp3']
+    src: ['../public/sound/tick.mp3']
 });
 
 const WARNING_THRESHOLD = 10;
@@ -132,7 +132,7 @@ function startGame() {
 function getQuestion() {
     if (availableQuestions.length === 0 || questionNumber >= TOTAL_QUESTION) {
         localStorage.setItem("mostRecentScore", Math.round(score / TOTAL_QUESTION));
-        return window.location.assign("/views/end.html");
+        return window.location.assign("../views/end.html");
     }
     startTimer();
     questionNumber++;
@@ -237,22 +237,16 @@ function startTimer() {
 
 }
 
-
-
-
 baseTimerPath.classList.add(COLOR_CODES.info.color);
 
 function setRemainingPathColor(timeLeft) {
     const { alert, warning, info } = COLOR_CODES;
-    // If the remaining time is less than or equal to 5, remove the "warning" class and apply the "alert" class.
     if (timeLeft <= alert.threshold) {
         sound.stop();
-        // var id = sound.play();
-        sound.rate(2, sound.play());
+        sound.rate(3, sound.play());
         baseTimerPath.classList.remove(warning.color);
         baseTimerPath.classList.add(alert.color);
 
-        // If the remaining time is less than or equal to 10, remove the base color and apply the "warning" class.
     } else if (timeLeft <= warning.threshold) {
         sound.stop();
         sound.rate(1.5, sound.play());
@@ -266,7 +260,6 @@ function calculateTimeFraction() {
     return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
 }
 
-// Update the dasharray value as time passes, starting with 283
 function setCircleDasharray() {
     const circleDasharray = `${(
         calculateTimeFraction() * 283
