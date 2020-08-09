@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="/public/img/fav.png">
+    <link rel="shortcut icon" type="image/png" href="../public/img/fav.png">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/public/stylesheets/app.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/app.css">
     <title>Submit</title>
 </head>
 
@@ -20,16 +20,16 @@
             <div id="finalScoreText">Your final score is</div>
             <h1 id="finalScore">0</h1>
             <form>
-                <input type="text" id="username" name="username" placeholder="username">
+                <input type="text" id="username" name="username" placeholder="username" required>
             </form>
 
             <button type="submit" class="buton" id="submit-score" onclick="saveHighScore(event)"
-                href="/views/leaderboard.html" disabled>Submit</button>
-            <a class="buton" href="/views/buildquiz.html">Play Again</a>
-            <a class="buton" href="/views/index.html">Home</a>
+                href="./leaderboard.html" disabled>Submit</button>
+            <a class="buton" href="./buildquiz.html">Play Again</a>
+            <a class="buton" href="./index.html">Home</a>
         </div>
     </div>
-    <script src="/scripts/end.js"></script>
+    <script src="../scripts/end.js"></script>
 </body>
 
 </html>
