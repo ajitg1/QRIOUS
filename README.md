@@ -7,3 +7,7 @@ Technologies Used:
 • HTML
 • CSS
 • Javascript
+
+Link to the game is given below: 
+
+ https://github.com/cenation007/QRIOUS.git
